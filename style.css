@@ -48,6 +48,7 @@ header li {
     padding: 5px;
     border: 2px dashed palevioletred;
     border-radius: 50px;
+    text-align: center;
 }
 
 li:hover {
