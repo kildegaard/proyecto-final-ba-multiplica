@@ -55,7 +55,12 @@ header li {
 
 }
 
-li:hover {
+header li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header li:hover {
     color: whitesmoke;
     background-color: rgba(137, 43, 226, 0.226);
 }
@@ -64,7 +69,7 @@ li:hover {
 main {
     margin-top: 100px;
     height: 1000px;
-    background-image: url(assets/img/cat-g8cfb4762c_1920.jpg);
+    background-image: url(../assets/img/cat-g8cfb4762c_1920.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
