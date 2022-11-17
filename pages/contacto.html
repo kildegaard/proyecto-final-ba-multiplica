@@ -1,39 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='es'>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Cerini</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="./assets/img/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Mi propio CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Michiemprendimiento - Contacto</title>
+    <!-- Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Freehand&family=Titillium+Web:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <p>Michiemprendimiento</p>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </header>
-    <main>
-        <h1>Holis</h1>
+<body class="user-select-none">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand fs-1" href="#">Gimnasio
+                    Cerini <img class="navbar-brand__icon" src="../assets/img/favicon.png"
+                        alt="Icono de una mancuerna"></a>
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse navbarSupportedContent-custom" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <div class="vr"></div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./horarios.html">Horarios</a>
+                        </li>
+                        <div class="vr"></div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./suplementos.html">Suplementos</a>
+                        </li>
+                        <div class="vr"></div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about-us.html">Sobre Nosotros</a>
+                        </li>
+                        <div class="vr"></div>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section__title">CONTACTANOS</h2>
+
+        <!-- Seccion contacto -->
+        <section class="contacto__items">
+            <div class="container">
+                <!-- Formulario -->
+                <form class="contacto__form" action='' method='' enctype=''>
+
+                    <h3>Datos personales</h3>
+                    <fieldset class="form__field--col">
+                        <label for='fullname'>Nombre y apellido</label>
+                        <input type='text' name='fullname' id='fullname' placeholder='Roberto Carlos'>
+
+                        <label for='phone'>Teléfono</label>
+                        <input type='number' name='phone' id='phone' placeholder='1134445555'>
+
+                        <label for='mail'>Correo electrónico</label>
+                        <input type='email' name='email' placeholder='name@domain.com'>
+                    </fieldset>
+
+                    <h3>Newsletter</h3>
+                    <fieldset class="form__field--col">
+                        <div class="newsletter">
+                            <p>¿Desea recibir nuestro Newsletter semanal?</p>
+                            <label for='si'>Sí</label>
+                            <input type='radio' name='opciones-newsletter' id='si' value='si'>
+                            <label for='no'>No</label>
+                            <input type='radio' name='opciones-newsletter' id='no' value='no'>
+                        </div>
+                    </fieldset>
+
+                    <h3>Temas de interés:</h3>
+                    <fieldset class="form__field--row">
+                        <div class="temas-interes">
+                            <label for="newsletter-rutinas">Rutinas especializadas</label>
+                            <input type="checkbox" name="newsletter-rutinas" id="newsletter-rutinas">
+                            <label for="newsletter-suplementos">Suplementos</label>
+                            <input type="checkbox" name="newsletter-suplementos" id="newsletter-suplementos">
+                            <label for="newsletter-nutricion">Nutrición y bienestar</label>
+                            <input type="checkbox" name="newsletter-nutricion" id="newsletter-nutricion">
+                        </div>
+                    </fieldset>
+
+                    <h3>Consulta</h3>
+                    <fieldset class="form__field--col">
+                        <p>Motivo de consulta:</p>
+                        <select name='' id=''>
+                            <option value='' disabled selected>Consulta</option>
+                            <option value='consulta-inscripcion'>Quiero averiguar para inscribirme!</option>
+                            <option value='consulta-clases-baile'>Quiero consultar por las clases de baile</option>
+                            <option value='consulta-problemas-abono'>Tengo problemas con mi medio de pago..</option>
+                        </select>
+                        <br><br>
+                        <textarea name="consulta-texto" id="consulta-texto" cols="45" rows="5"></textarea>
+                    </fieldset>
+
+                    <div class="form__buttons">
+                        <button type='submit'>Enviar formulario</button>
+                        <button type='reset'>Borrar todo</button>
+                    </div>
+                </form>
+                <!-- Iframe con mapa del local -->
+                <div class="contacto__iframe-datos">
+                    <iframe class="contacto__iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.0625172656332!2d-58.497328984238116!3d-34.55197246227006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6e8458305b5%3A0xd86d58b9c9dcbf44!2sArias%204745%2C%20C1430CSK%20CABA!5e0!3m2!1ses-419!2sar!4v1668639316495!5m2!1ses-419!2sar"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <h3 class="section__title">Datos de contacto</h3>
+                    <ul class="contacto__datos">
+                        <li>Teléfono: 1111-1111</li>
+                        <li>Correo: gimnasio@cerini.com</li>
+                        <li>Dirección: Arias 4745</li>
+                        <li>Saavedra, CABA</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion disclaimer -->
+        <section class="contacto__disclaimer">
+            <h2 class="section__title">Disclaimer</h2>
+            <p class="disclaimer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ullam numquam,
+                placeat quos facilis,
+                explicabo minima nesciunt, ad molestias enim provident quod cumque! Eaque nisi explicabo obcaecati
+                consectetur, maiores aliquam?
+                Nemo et facilis sapiente expedita consequatur? Excepturi nesciunt quia at vitae consequuntur accusamus
+                autem accusantium. Velit aliquam, autem commodi obcaecati ab natus ex quaerat dolorum necessitatibus!
+                Vitae accusamus eos ab?</p>
+        </section>
     </main>
-    <footer>
-        <p>amaterasuDev® - todos los derechos reservados</p>
-        <p>Made with ❤ by Gus</p>
-        <ul>
+
+    <footer class="footer">
+        <p class="footer__rights">2022 - amaterasuDev® - todos los derechos reservados</p>
+        <small>Made with ❤ by Gus</small>
+        <ul class="footer__ul">
             <li>
-                <a href="https://www.facebook.com/" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=100069750592245" target="_blank">
                     <img src="../assets/img/facebook_48.png" alt="Facebook" height="30px">
                 </a>
-
             </li>
             <li>
-                <a href="https://www.instagram.com/" target="_blank">
+                <a href="https://www.instagram.com/cerinigimnasio/" target="_blank">
                     <img src="../assets/img/instagram_48.png" alt="Instagram" height="30px">
                 </a>
             </li>
@@ -41,10 +173,17 @@
                 <a href="https://twitter.com/" target="_blank">
                     <img src="../assets/img/twitter_48.png" alt="Twitter" height="30px">
                 </a>
-
             </li>
         </ul>
     </footer>
+
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
